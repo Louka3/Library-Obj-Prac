@@ -1,3 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+
+html{
+    height: 100vh;
+}
+
 body {
-    background-color: lightslategray;
+    background-color: #f9ebe1;
+    width: 100vw;
+    margin: 0;
+}
+
+.page-top{
+    background-color: #f5dccb ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    width: 100vw;
+    border-bottom: 2px solid #e9d0c0;
+}
+
+.title{
+    font-size: 45px;
+    font-family: "Fredoka";
+    font-weight: bolder;
+    padding-left: 30px;
+}
+
+.page-top ul{
+    font-family: "Fredoka";
+    list-style: none;
+    padding-right: 160px;
+}
+
+.page-middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.add-book-button{
+    font-family: "Fredoka";
+    background-color: #f0ccb3;
+    border-radius: 12px;
+    height: 45px;
+    width: 90px;
+}
+
+.library-container{
+    display: grid;
+    grid-template-columns: repeat(4, 19vw) ;
+    grid-template-rows: 300px auto;
+    grid-gap: 30px;
+}
+
+.book-placeholder{
+    border: 3px solid rgb(20, 95, 38);
+    width: 19vw;
+    height: 300px;
 }
