@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Ubuntu:wght@300&display=swap');
-html{
-    height: 100vh;
-}
+
 
 body {
     background-color: #f9ebe1;
@@ -47,9 +45,7 @@ body {
     padding-bottom: 25px;
     padding-top: 25px;
     width: 100vw;
-    /* margin-left: 120px; */
 }
-
 
 .add-book-button{
     font-family: "Fredoka";
@@ -100,3 +96,4 @@ body {
     border-radius: 12px;
     font-family: "Quicksand";
 }
+
