@@ -32,27 +32,27 @@ console.log(myLibrary)
 
 
 for (let i = 0; i < myLibrary.length; i++){
-    let newBook = document.createElement('div')
+    let newBook = document.createElement('div') //create elements
     let bookTitle = document.createElement('p')
     let bookAuthor = document.createElement('p')
     let bookPages = document.createElement('p')
     let bookReadStatus = document.createElement('p')
 
-    newBook.className = "new-book"
+    newBook.className = "new-book" //give elements their class names
     bookTitle.className = "book-title"
     bookAuthor.className = "author"
     bookPages.className = "page-count"
     bookReadStatus.className = "read-status"
     
-    bookTitle.textContent = myLibrary[i].title
+    bookTitle.textContent = myLibrary[i].title //add the object attributes to the elements
     bookAuthor.textContent = myLibrary[i].author
     bookPages.textContent = myLibrary[i].pages
     bookReadStatus.textContent = myLibrary[i].readStatus
     
-    let newButton = document.createElement('button')
+    let newButton = document.createElement('button') //the read-status button
     newButton.className = "read-status-button"
     newButton.innerText = "Read Status"
     
-    newBook.append(bookTitle, bookAuthor, bookPages, bookReadStatus, newButton)
+    newBook.append(bookTitle, bookAuthor, bookPages, bookReadStatus, newButton) //put it all together and add to library
     libraryContainer.appendChild(newBook)
 }
