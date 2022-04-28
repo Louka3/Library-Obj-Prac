@@ -63,7 +63,7 @@ body {
     grid-gap: 30px;
 }
 
-.book-placeholder{
+.new-book{
     border: 3px solid #0fb900;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@ body {
     height: 300px;
 }
 
-.book-placeholder p{
+.new-book p{
     font-family: "Quicksand";
 }
 

@@ -21,17 +21,7 @@ const theWayOfKings = new Book("The Way of Kings", "Brandon Sanderson",
 const wordsOfRadiance = new Book("Words of Radiance", "Brandon Sanderson",
     "1087", "already read")
 
-const libraryContainer = document.querySelector('.library-container')
-
-let bookTitle = document.createElement('p')
-let bookAuthor = document.createElement('p')
-let bookPages = document.createElement('p')
-let bookReadStatus = document.createElement('p')
-
-bookTitle.className = "book-title"
-bookAuthor.className = "author"
-bookPages.className = "page-count"
-bookReadStatus.className = "read-status"
+let libraryContainer = document.querySelector('.library-container')
 
 theWayOfKings.addBookToLibrary(theWayOfKings)
 wordsOfRadiance.addBookToLibrary(wordsOfRadiance)
@@ -40,19 +30,29 @@ console.log(theWayOfKings.info())
 console.log(wordsOfRadiance.info())
 console.log(myLibrary)
 
-// for (let i = 0; i < myLibrary.length; i++){
-//     console.log(myLibrary[i].title)
-//     console.log(myLibrary[i].author)
-//     console.log(myLibrary[i].pages)
-//     console.log(myLibrary[i].readStatus)    
-// }
 
-
-for (let i = 0; i < myLibrary.length(); i++){
+for (let i = 0; i < myLibrary.length; i++){
     let newBook = document.createElement('div')
-    newBook.className = "new-book"
-    
+    let bookTitle = document.createElement('p')
+    let bookAuthor = document.createElement('p')
+    let bookPages = document.createElement('p')
+    let bookReadStatus = document.createElement('p')
 
+    newBook.className = "new-book"
+    bookTitle.className = "book-title"
+    bookAuthor.className = "author"
+    bookPages.className = "page-count"
+    bookReadStatus.className = "read-status"
+    
+    bookTitle.textContent = myLibrary[i].title
+    bookAuthor.textContent = myLibrary[i].author
+    bookPages.textContent = myLibrary[i].pages
+    bookReadStatus.textContent = myLibrary[i].readStatus
+    
+    let newButton = document.createElement('button')
+    newButton.className = "read-status-button"
+    newButton.innerText = "Read Status"
+    
+    newBook.append(bookTitle, bookAuthor, bookPages, bookReadStatus, newButton)
     libraryContainer.appendChild(newBook)
 }
-
