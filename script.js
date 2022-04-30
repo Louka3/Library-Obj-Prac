@@ -13,12 +13,21 @@ function Book(title, author, pages, readStatus){
 }
  Book.prototype.addBookToLibrary = function(book){
     myLibrary.push(book)
- }
+}
+ function addBook(){
+    let newTitle = input("What is the title of the book?")
+    let newAuthor = input("Who is the author of the book?")
+    let newPageCount = input("How many pages are in the book?")
+    let newReadStatus = input("Have you already read this book?('already read' or 'have not read yet')")
+    let addedBook = new Book(newTitle, newAuthor, newPageCount, newReadStatus)
+    addedBook.addBookToLibrary(addedBook)
+    
+}
 
-const theWayOfKings = new Book("The Way of Kings", "Brandon Sanderson",
+let theWayOfKings = new Book("The Way of Kings", "Brandon Sanderson",
     "1007", "already read")
 
-const wordsOfRadiance = new Book("Words of Radiance", "Brandon Sanderson",
+let wordsOfRadiance = new Book("Words of Radiance", "Brandon Sanderson",
     "1087", "already read")
 
 let libraryContainer = document.querySelector('.library-container')
@@ -56,3 +65,6 @@ for (let i = 0; i < myLibrary.length; i++){
     newBook.append(bookTitle, bookAuthor, bookPages, bookReadStatus, newButton) //put it all together and add to library
     libraryContainer.appendChild(newBook)
 }
+
+let addBookButton = document.querySelector('.add-book-button')
+addBookButton.addEventListener('click',addBook)
