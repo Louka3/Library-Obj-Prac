@@ -20,8 +20,7 @@ function Book(title, author, pages, readStatus){
     let newPageCount = input("How many pages are in the book?")
     let newReadStatus = input("Have you already read this book?('already read' or 'have not read yet')")
     let addedBook = new Book(newTitle, newAuthor, newPageCount, newReadStatus)
-    addedBook.addBookToLibrary(addedBook)
-    
+    addedBook.addBookToLibrary(addedBook)  
 }
 
 let theWayOfKings = new Book("The Way of Kings", "Brandon Sanderson",
